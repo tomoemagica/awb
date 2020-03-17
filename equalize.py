@@ -8,7 +8,6 @@ from pathlib import Path, PureWindowsPath
 
 target_dir = os.getcwd()
 target_dir = os.path.join(target_dir, 'data_src')
-target_dir = os.path.join(target_dir, 'aligned')
 
 file_count = len(os.listdir(target_dir))
 
@@ -32,7 +31,7 @@ for thisFile in os.listdir(target_dir):
 
         im = Image.open(file_name)
 
-        if im.format == "JPEG":
+        if im.format == "PNG":
             im = im.convert("YCbCr")
             yy, cb, cr = im.split()
 
@@ -42,4 +41,4 @@ for thisFile in os.listdir(target_dir):
             im = im.convert("RGB")
 
             basename_without_ext = os.path.splitext(os.path.basename(file_name))[0]
-            im.save(equalize_path + '/' + basename_without_ext + '.jpg', quality=100)
+            im.save(equalize_path + '/' + basename_without_ext + '.png')
