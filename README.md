@@ -20,3 +20,5 @@ DFL\worksapace\data_srcの下の、動画のコマ画像を、自動ホワイト
 自動ホワイトバランス後の動画のコマ画像は、DFL\worksapace\data_src\awbフォルダに書き込まれます
 
 元画像のDFL\worksapace\data_srcの下の画像はそのままです
+
+srcの顔色がバラバラな時に、顔色の補正に役立つかも知れません
