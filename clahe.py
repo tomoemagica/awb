@@ -40,6 +40,6 @@ for thisFile in os.listdir(target_dir):
 
         img = cv2.cvtColor(img_yuv, cv2.COLOR_YUV2BGR)
 
-        basename_without_ext = os.path.splitext(os.path.basename(file_name))[0]
+        basename = os.path.basename(file_name)
 
-        cv2.imwrite(clahe_path +  '/' + basename_without_ext + '.jpg', img)
+        cv2.imwrite(clahe_path +  '/' + basename, img)

@@ -39,5 +39,5 @@ for thisFile in os.listdir(target_dir):
     if os.path.isfile(file_name):
         img = cv2.imread(file_name)
         final = np.array(white_balance(img))
-        basename_without_ext = os.path.splitext(os.path.basename(file_name))[0]
-        cv2.imwrite(awb_path +  '/' + basename_without_ext + '.jpg', final)
+        basename = os.path.basename(file_name)
+        cv2.imwrite(awb_path +  '/' + basename, final)
